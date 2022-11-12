@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="example test suite" verbose="1">
+    <test name="example run">
+        <groups>
+            <run>
+                <include name="group1"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.globant.GroupAndSuites"></class>
+        </classes>
+    </test>
+    <test name="example two">
+        <classes>
+            <class name="org.globant.AnnotationTests">
+                <methods>
+                    <exclude name="testConcat"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
