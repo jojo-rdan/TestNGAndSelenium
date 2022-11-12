@@ -25,9 +25,8 @@ public class AnnotationTests {
         System.out.println("Login out the app");
     }
     @Test
-    public void testConcat(){
-        String a = "I love ";
-        String b = "test automation";
+    @Parameters({"stringA", "stringB"})
+    public void testConcat(String a, String b){
         String result = a + b;
         Assert.assertEquals(result, "I love test automation");
     }

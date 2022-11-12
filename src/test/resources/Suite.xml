@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="example test suite" verbose="1">
+    <listeners>
+        <listener class-name="org.globant.MyCoolListener"></listener>
+    </listeners>
+    <parameter name="stringA" value="I love "></parameter>
+    <parameter name="stringB" value="test automation"></parameter>
     <test name="example run">
         <groups>
             <run>
@@ -15,7 +20,7 @@
         <classes>
             <class name="org.globant.AnnotationTests">
                 <methods>
-                    <exclude name="testConcat"></exclude>
+                    <exclude name="testCount"></exclude>
                 </methods>
             </class>
         </classes>
